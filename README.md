@@ -160,7 +160,12 @@ sudo apt install fontconfig
 sudo apt-get install ttf-mscorefonts-installer
 sudo apt-get install -y --force-yes --no-install-recommends fonts-wqy-microhei
 sudo apt-get install -y --force-yes --no-install-recommends ttf-wqy-zenhei
-#可能有装不上的，应该问题不大
+#可能有装不上的，阿里云直接
+echo "deb http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty multiverse
+deb http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-updates multiverse
+deb http://us-west-2.ec2.archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse" | sudo tee /etc/apt/sources.list.d/multiverse.list 
+sudo apt-get update
+sudo apt-get install ttf-mscorefonts-installer 这样安装
 
 # 查看中文字体 --确认字体是否安装成功
 fc-list :lang=zh-cn
