@@ -115,7 +115,7 @@ sudo apt-get install -y ffmpeg
 
 x264、x265编码器：
 ```Bash
-sudo apt-get install -y x264 x265 libx264 libx265
+sudo apt-get install -y x264 x265 libx264-dev libx265-dev
 ```
 
 安装python3：
